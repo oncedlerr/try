@@ -15,10 +15,6 @@
       <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
     </Filter>
-    <Filter Include="Generated Files">
-      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -43,58 +39,61 @@
     <ClCompile Include="wardenfort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\GITHUB-FETCHED\updated-login\login\alertnotif.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="accountsettings.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\GITHUB-FETCHED\updated-login\login\alertnotif.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="enter.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="forgotpass.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="login.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loginsession.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="otp.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="passwordsec.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="signup.cpp">
-      <Filter>Generated Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="wardenfort.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="login.h">
-      <Filter>Generated Files</Filter>
-    </QtMoc>
-    <QtMoc Include="signup.h">
-      <Filter>Generated Files</Filter>
+    <QtMoc Include="accountsettings.h">
+      <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="..\..\..\..\..\GITHUB-FETCHED\updated-login\login\alertnotif.h">
-      <Filter>Generated Files</Filter>
-    </QtMoc>
-    <QtMoc Include="accountsettings.h">
-      <Filter>Generated Files</Filter>
-    </QtMoc>
-    <QtMoc Include="passwordsec.h">
-      <Filter>Generated Files</Filter>
-    </QtMoc>
-    <QtMoc Include="otp.h">
-      <Filter>Generated Files</Filter>
+      <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="enter.h">
-      <Filter>Generated Files</Filter>
+      <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="forgotpass.h">
-      <Filter>Generated Files</Filter>
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="login.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="otp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="passwordsec.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="signup.h">
+      <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -128,5 +127,10 @@
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="wardenfort.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loginsession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

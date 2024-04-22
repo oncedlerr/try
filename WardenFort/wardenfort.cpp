@@ -10,13 +10,13 @@
 #include <ctime>
 #include <QScrollBar>
 #include <pcap.h>
-#include <QDebug>
+#include <QDebug> 
 #include "accountsettings.h"
 #include "passwordsec.h"
 #include "login.h"
 #include "loginsession.h"
 
-#pragma comment(lib, "Ws2_32.lib") // Add the following line to include Ws2_32.lib directly in your source code
+#pragma comment(lib, "Ws2_32.lib")
 
 int i = 0;
 int j = 0;
@@ -89,7 +89,7 @@ void WardenFort::setOverallAlert(const QString& text) {
 }
 
 QTableWidget* WardenFort::getTableWidget() {
-    return ui->tableWidget; // Return the tableWidget
+    return ui->tableWidget;
 
 }
 
@@ -97,7 +97,7 @@ void WardenFort::setWelcomeText(const QString& text) {
     ui->welcome_text->setText(text);
 }
 
-// Define TCP header flags for Windows
+// Define TCP header flags
 #define TH_FIN  0x01
 #define TH_SYN  0x02
 #define TH_RST  0x04
@@ -351,7 +351,7 @@ void packetHandler(WardenFort* wardenFort, const struct pcap_pkthdr* pkthdr, con
             tableWidget->item(row, col)->setBackground(QColor(62, 75, 44)); // Change row color to red
         }
     }
-    
+
     // Check if the packet is an ICMP packet
     if (ipHeader->Protocol == IPPROTO_ICMP) {
         // Calculate the total length of the packet
@@ -390,7 +390,7 @@ void packetHandler(WardenFort* wardenFort, const struct pcap_pkthdr* pkthdr, con
             wardenFort->setcriticalAnomalies(QString::number(j));
             k = i + j;
             wardenFort->setOverallAlert(QString::number(k));
-            
+
             for (int col = 0; col < tableWidget->columnCount(); ++col) {
                 tableWidget->item(row, col)->setBackground(QColor(61, 44, 75));
             }

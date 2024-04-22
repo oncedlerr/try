@@ -61,17 +61,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <IncludePath>C:\Qt\6.5.3\msvc2019_64\include\QtNetwork;C:\Qt\6.5.3\msvc2019_64\include;C:\npcap\Include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Qt\6.5.3\msvc2019_64\include;C:\npcap\Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
-      <AdditionalLibraryDirectories>C:\Qt\6.5.3\msvc2019_64\include\QtNetwork;C:\npcap-sdk-1.13\Lib\x64;C:\npcap\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wpcap.lib;Packet.lib;QSslSocket;qsslsocket.h;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\npcap-sdk-1.13\Lib\x64;C:\npcap\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wpcap.lib;Packet.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Qt\6.5.3\msvc2019_64\include;C:\Qt\6.5.3\msvc2019_64\include\QtNetwork;C:\npcap-sdk-1.13\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\npcap-sdk-1.13\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -114,6 +114,7 @@
     <ClCompile Include="enter.cpp" />
     <ClCompile Include="forgotpass.cpp" />
     <ClCompile Include="login.cpp" />
+    <ClCompile Include="loginsession.cpp" />
     <ClCompile Include="otp.cpp" />
     <ClCompile Include="passwordsec.cpp" />
     <ClCompile Include="signup.cpp" />
@@ -144,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="forgotpass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loginsession.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

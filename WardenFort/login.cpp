@@ -18,6 +18,7 @@
 #include <QDialog> // Include QDialog
 #include "wardenfort.h"
 #include "loginsession.h"
+#include "wardenfort.h"
 
 QString userEmail;
 
@@ -153,8 +154,6 @@ void login::sendEmail(const QString& recipientEmail, const QString& code) {
     if (!socket.waitForReadyRead()) {
         return;
     }
-
-
 }
 
 signup *signupWindow = nullptr; // Declaration of signupWindow
@@ -187,10 +186,6 @@ login::login(QWidget *parent) :
     // Initialize alertWindow to nullptr
     otpWindow = nullptr;
     signupWindow = nullptr;
-
-    // Set icons for the eye checkbox
-    ui->eye_open->setIcon(QIcon(":/eye_open.png"));
-    ui->eye_closed->setIcon(QIcon(":/eye_closed.png"));
 }
 
 login::~login()
@@ -226,7 +221,7 @@ void login::on_loginButton_clicked()
                 hiddenEmail[i] = '*';
             }
         }
-
+        
         // Generate OTP
         generateCode();
 

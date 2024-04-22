@@ -134,7 +134,7 @@ padding: 50px;
 </string>
      </property>
      <property name="placeholderText">
-      <string>Type your username 1111</string>
+      <string>Type your username</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="typePASS_box">

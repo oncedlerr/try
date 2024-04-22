@@ -21,13 +21,14 @@ int main(int argc, char* argv[])
 
     qDebug() << "Database connected successfully";
 
-    login login;
-    login.show();
+    //login login;
+    //login.show();
 
-    //start of testing grounds - remove when finished testing
-        //WardenFort wardenfort;
-        //wardenfort.show();
-    //end of testing grounds - remove when finished testing
+    
+        WardenFort wardenfort;
+        wardenfort.show();
+        wardenfort.scanActiveLANAdapters();
+    
 
     return a.exec();
 }
